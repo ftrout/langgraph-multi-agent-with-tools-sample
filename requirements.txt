@@ -1,0 +1,7 @@
+langgraph
+langchain
+langchain-xai
+requests
+python-dotenv
+tenacity
+typing_extensions
