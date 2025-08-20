@@ -186,7 +186,7 @@ def create_workflow():
     return workflow.compile()
 
 # Function to run the workflow
-def assess_url_maliciousness(url: str) -> Dict[str, Any]:
+def assess_url(url: str) -> Dict[str, Any]:
     # Validate URL
     parsed = urlparse(url)
     if not all([parsed.scheme, parsed.netloc]):
@@ -217,7 +217,7 @@ if __name__ == "__main__":
     while True:
         url_to_check = input("Enter the URL to check (e.g., https://example.com): ").strip()
         try:
-            result = assess_url_maliciousness(url_to_check)
+            result = assess_url(url_to_check)
             print(f"\nURL: {result['url']}")
             print(f"VirusTotal Result: {result['vt_result']}")
             print(f"OTX Result: {result['otx_result']}")
